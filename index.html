@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do List (localStorage + drag & drop)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <header class="header">
+      <h1>To-Do List</h1>
+      <p class="subtitle">Add tasks, mark complete, drag to reorder — saved in your browser.</p>
+    </header>
+
+    <form id="task-form" class="task-form" aria-label="Add new task">
+      <input id="task-input" type="text" placeholder="Add a new task..." aria-label="Task description" />
+      <button type="submit" id="add-btn" aria-label="Add task">Add</button>
+    </form>
+
+    <section class="list-section">
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <div id="empty" class="empty">No tasks yet — add one above ✨</div>
+    </section>
+
+    <footer class="footer">
+      <button id="clear-btn" class="ghost">Clear all</button>
+      <small>Tasks saved to <code>localStorage</code></small>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
